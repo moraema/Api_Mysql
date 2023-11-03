@@ -1,0 +1,127 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "APIMysql",
+    "dateExported": "2023-11-03T19:31:17.285Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "60303723-f24a-4c1b-9b76-ff7ac3b8aec3",
+            "colId": "79962441-25b0-4b85-86dc-e6092f718d99",
+            "containerId": "",
+            "name": "post login",
+            "url": "localhost:3000/auth/login",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-11-03T16:08:18.257Z",
+            "modified": "2023-11-03T18:47:33.436Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"usuario\": \"juan12\",\n  \"password\": \"1253\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "d6514565-d9dd-4369-9ccf-c3250f989b05",
+            "colId": "79962441-25b0-4b85-86dc-e6092f718d99",
+            "containerId": "",
+            "name": "get clientes id",
+            "url": "localhost:3000/clientes/7",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-11-03T16:08:31.960Z",
+            "modified": "2023-11-03T18:53:54.133Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "b4bc3afb-22e4-4e68-aa59-77073314b92a",
+            "colId": "79962441-25b0-4b85-86dc-e6092f718d99",
+            "containerId": "",
+            "name": "get clientes",
+            "url": "localhost:3000/clientes?page=2&limit=4",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2023-11-03T16:08:48.078Z",
+            "modified": "2023-11-03T19:27:40.829Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "page",
+                    "value": "2",
+                    "isPath": false
+                },
+                {
+                    "name": "limit",
+                    "value": "4",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "eb49f69b-a75a-4e2e-bf29-62ef3a70dcd8",
+            "colId": "79962441-25b0-4b85-86dc-e6092f718d99",
+            "containerId": "",
+            "name": "post clientes",
+            "url": "localhost:3000/clientes",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2023-11-03T16:09:48.713Z",
+            "modified": "2023-11-03T17:38:42.198Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\": \"prueba6\", \n  \"apellido\": \"lucas\",\n  \"usuario\": \"manu0\",\n  \"password\": \"2004\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "d16b0f3d-2c28-4a8c-9f8d-11e23688f462",
+            "colId": "79962441-25b0-4b85-86dc-e6092f718d99",
+            "containerId": "",
+            "name": "put clientes",
+            "url": "localhost:3000/clientes/7",
+            "method": "PUT",
+            "sortNum": 50000,
+            "created": "2023-11-03T16:10:13.504Z",
+            "modified": "2023-11-03T18:54:49.287Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"apellido\": \"morales\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "e2dd7d39-71e3-4343-b7fd-a77262bb70a2",
+            "colId": "79962441-25b0-4b85-86dc-e6092f718d99",
+            "containerId": "",
+            "name": "deleted cientes",
+            "url": "localhost:3000/clientes/7",
+            "method": "DELETE",
+            "sortNum": 60000,
+            "created": "2023-11-03T16:10:24.808Z",
+            "modified": "2023-11-03T18:55:16.993Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ],
+    "settings": {
+        "headers": [
+            {
+                "name": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGllbnRlIjp7ImlkIjoxfSwiaWF0IjoxNjk5MDM5NTk2LCJleHAiOjE2OTkwNDMxOTZ9.2ocVuhVkSccTXng70rIE4X5qIngdPVBFsfLErDjfTWw"
+            }
+        ]
+    }
+}
