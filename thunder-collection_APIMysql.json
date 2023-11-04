@@ -1,116 +1,116 @@
 {
     "client": "Thunder Client",
-    "collectionName": "APIMysql",
-    "dateExported": "2023-11-03T19:31:17.285Z",
+    "collectionName": "APImysqlAlex",
+    "dateExported": "2023-11-04T05:06:04.885Z",
     "version": "1.1",
     "folders": [],
     "requests": [
         {
-            "_id": "60303723-f24a-4c1b-9b76-ff7ac3b8aec3",
-            "colId": "79962441-25b0-4b85-86dc-e6092f718d99",
+            "_id": "5e55a450-551e-4acd-84da-b44e696f9457",
+            "colId": "f21b935c-0e29-45e5-9fc8-b3f9affdd9cf",
             "containerId": "",
-            "name": "post login",
-            "url": "localhost:3000/auth/login",
+            "name": "post loginemail",
+            "url": "localhost:3000/auth/login-email",
             "method": "POST",
-            "sortNum": 10000,
-            "created": "2023-11-03T16:08:18.257Z",
-            "modified": "2023-11-03T18:47:33.436Z",
+            "sortNum": 20000,
+            "created": "2023-11-04T03:58:46.124Z",
+            "modified": "2023-11-04T04:00:13.651Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"usuario\": \"juan12\",\n  \"password\": \"1253\"\n}",
+                "raw": "{\n  \"correo\": \"juan@example.com\"\n}",
                 "form": []
             },
             "tests": []
         },
         {
-            "_id": "d6514565-d9dd-4369-9ccf-c3250f989b05",
-            "colId": "79962441-25b0-4b85-86dc-e6092f718d99",
+            "_id": "25e5df93-0595-4939-9cb1-edfdd72da904",
+            "colId": "f21b935c-0e29-45e5-9fc8-b3f9affdd9cf",
             "containerId": "",
-            "name": "get clientes id",
-            "url": "localhost:3000/clientes/7",
+            "name": "get contactos id",
+            "url": "localhost:3000/contactos/4",
             "method": "GET",
-            "sortNum": 20000,
-            "created": "2023-11-03T16:08:31.960Z",
-            "modified": "2023-11-03T18:53:54.133Z",
+            "sortNum": 30000,
+            "created": "2023-11-04T04:00:54.222Z",
+            "modified": "2023-11-04T05:04:57.777Z",
             "headers": [],
             "params": [],
             "tests": []
         },
         {
-            "_id": "b4bc3afb-22e4-4e68-aa59-77073314b92a",
-            "colId": "79962441-25b0-4b85-86dc-e6092f718d99",
+            "_id": "3d773304-eae3-4e57-95bf-65bbafcdec80",
+            "colId": "f21b935c-0e29-45e5-9fc8-b3f9affdd9cf",
             "containerId": "",
-            "name": "get clientes",
-            "url": "localhost:3000/clientes?page=2&limit=4",
+            "name": "get contactos",
+            "url": "localhost:3000/contactos?page=1&limit=10",
             "method": "GET",
-            "sortNum": 30000,
-            "created": "2023-11-03T16:08:48.078Z",
-            "modified": "2023-11-03T19:27:40.829Z",
+            "sortNum": 40000,
+            "created": "2023-11-04T04:02:11.415Z",
+            "modified": "2023-11-04T04:27:41.762Z",
             "headers": [],
             "params": [
                 {
                     "name": "page",
-                    "value": "2",
+                    "value": "1",
                     "isPath": false
                 },
                 {
                     "name": "limit",
-                    "value": "4",
+                    "value": "10",
                     "isPath": false
                 }
             ],
             "tests": []
         },
         {
-            "_id": "eb49f69b-a75a-4e2e-bf29-62ef3a70dcd8",
-            "colId": "79962441-25b0-4b85-86dc-e6092f718d99",
+            "_id": "85ed56d9-376f-4228-8077-3fe17ae9861b",
+            "colId": "f21b935c-0e29-45e5-9fc8-b3f9affdd9cf",
             "containerId": "",
-            "name": "post clientes",
-            "url": "localhost:3000/clientes",
+            "name": "post contactos",
+            "url": "localhost:3000/contactos",
             "method": "POST",
-            "sortNum": 40000,
-            "created": "2023-11-03T16:09:48.713Z",
-            "modified": "2023-11-03T17:38:42.198Z",
-            "headers": [],
-            "params": [],
-            "body": {
-                "type": "json",
-                "raw": "{\n  \"nombre\": \"prueba6\", \n  \"apellido\": \"lucas\",\n  \"usuario\": \"manu0\",\n  \"password\": \"2004\"\n}",
-                "form": []
-            },
-            "tests": []
-        },
-        {
-            "_id": "d16b0f3d-2c28-4a8c-9f8d-11e23688f462",
-            "colId": "79962441-25b0-4b85-86dc-e6092f718d99",
-            "containerId": "",
-            "name": "put clientes",
-            "url": "localhost:3000/clientes/7",
-            "method": "PUT",
-            "sortNum": 50000,
-            "created": "2023-11-03T16:10:13.504Z",
-            "modified": "2023-11-03T18:54:49.287Z",
-            "headers": [],
-            "params": [],
-            "body": {
-                "type": "json",
-                "raw": "{\n  \"apellido\": \"morales\"\n}",
-                "form": []
-            },
-            "tests": []
-        },
-        {
-            "_id": "e2dd7d39-71e3-4343-b7fd-a77262bb70a2",
-            "colId": "79962441-25b0-4b85-86dc-e6092f718d99",
-            "containerId": "",
-            "name": "deleted cientes",
-            "url": "localhost:3000/clientes/7",
-            "method": "DELETE",
             "sortNum": 60000,
-            "created": "2023-11-03T16:10:24.808Z",
-            "modified": "2023-11-03T18:55:16.993Z",
+            "created": "2023-11-04T04:03:21.243Z",
+            "modified": "2023-11-04T04:28:02.493Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"correo\": \"alexq@gmail.com\",\n  \"telefono\": \"9321114713\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "0c43176b-a830-4474-b7c0-b01a6c16cc00",
+            "colId": "f21b935c-0e29-45e5-9fc8-b3f9affdd9cf",
+            "containerId": "",
+            "name": "put contacto",
+            "url": "localhost:3000/contactos/4",
+            "method": "PUT",
+            "sortNum": 70000,
+            "created": "2023-11-04T04:04:47.258Z",
+            "modified": "2023-11-04T05:05:21.036Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"telefono\": \"9612341382\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "a779265e-844b-4516-b972-357c4904d068",
+            "colId": "f21b935c-0e29-45e5-9fc8-b3f9affdd9cf",
+            "containerId": "",
+            "name": "deleted contactos",
+            "url": "localhost:3000/contactos/4",
+            "method": "DELETE",
+            "sortNum": 80000,
+            "created": "2023-11-04T04:05:40.147Z",
+            "modified": "2023-11-04T05:05:35.282Z",
             "headers": [],
             "params": [],
             "tests": []
@@ -120,7 +120,7 @@
         "headers": [
             {
                 "name": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGllbnRlIjp7ImlkIjoxfSwiaWF0IjoxNjk5MDM5NTk2LCJleHAiOjE2OTkwNDMxOTZ9.2ocVuhVkSccTXng70rIE4X5qIngdPVBFsfLErDjfTWw"
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb250YWN0byI6eyJpZCI6MX0sImlhdCI6MTY5OTA3NDI0MSwiZXhwIjoxNjk5MDc3ODQxfQ.7b13YVLVO7UW6EdQKPVuJNVjm-2-iXY6zcnuORxPzB8"
             }
         ]
     }

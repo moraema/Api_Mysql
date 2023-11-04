@@ -1,23 +1,24 @@
 const jwt = require('jsonwebtoken');
-const jwtSecret = 'eternamente-siempre';
+const newJwtSecret = 'clave-secreta';
 
-const verificarJwt = (req, res, next) => {
+const verifyToken = (req, res, next) => {
     const token = req.get('Authorization');
 
-    jwt.verify(token, jwtSecret, (err, decode) => {
+    jwt.verify(token, newJwtSecret, (err, decode) => {
         if (err) {
             return res.status(401).send({
-                message: 'hubo un error al validar el token',
+                message: 'Hubo un error al validar el token',
                 error: err.message
             });
         }
-
-        req.cliente = decode.cliente;
+        // Agrega un registro para verificar req.contacto
+        console.log('req.contacto:', req.contacto);
+        req.contacto = decode.contacto;
         next();
-    })
+    });
 };
 
 
 module.exports = {
-    verificarJwt
-}
+    verifyToken
+};

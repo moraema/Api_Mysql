@@ -1,21 +1,13 @@
 const Sequelize = require('sequelize');
-const sequelize = require('../configs/db.configs');
+const sequelize = require('../configs/db.confings');
 
-const Cliente = sequelize.define('Clientes', {
-    nombre: {
-        type: Sequelize.STRING,
-        allowNull: false,
-    },
-    apellido: {
-        type: Sequelize.STRING,
-        allowNull: false,
-    },
-    usuario: {
+const Contacto = sequelize.define('Contactos', {
+    correo: {
         type: Sequelize.STRING,
         allowNull: false,
         unique: true,
     },
-    password: {
+    telefono: {
         type: Sequelize.STRING,
         allowNull: false,
     },
@@ -50,13 +42,12 @@ const Cliente = sequelize.define('Clientes', {
     },
 });
 
-
-Cliente.sync()
+Contacto.sync()
     .then(() => {
-        console.log('Tabla Cliente creada.');
+        console.log('Tabla Contacto creada.');
     })
     .catch(err => {
-        console.error('Error al crear la tabla Cliente:', err);
+        console.error('Error al crear la tabla Contacto:', err);
     });
 
-module.exports = Cliente;
+module.exports = Contacto;

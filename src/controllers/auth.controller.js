@@ -1,40 +1,31 @@
-const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const op = require('sequelize');
-const Clientes = require('../models/cliente.model');
+const Sequelize = require('sequelize');
+const Contactos = require('../models/contacto.model');
 
-const login = async(req, res) => {
+const loginByEmail = async (req, res) => {
     try {
-        const { usuario, password } = req.body;
+        const { correo } = req.body;
 
-        const ClienteEncontrado = await Clientes.findOne({
+        const ContactoEncontrado = await Contactos.findOne({
             where: {
-                usuario: usuario,
+                correo: correo,
                 deleted: false,
             },
         });
 
-        if (!ClienteEncontrado) {
+        if (!ContactoEncontrado) {
             return res.status(400).json({
-                message: 'Usuario o contraseña incorrectos',
-            });
-        }
-
-        const passwordEncontrado = bcrypt.compareSync(password, ClienteEncontrado.password);
-
-        if (!passwordEncontrado) {
-            return res.status(400).json({
-                message: 'Usuario o contraseña incorrectos',
+                message: 'Correo incorrecto',
             });
         }
 
         const payload = {
-            cliente: {
-                id: ClienteEncontrado.id,
+            contacto: {
+                id: ContactoEncontrado.id,
             },
         };
 
-        const token = jwt.sign(payload, "eternamente-siempre", { expiresIn: '1h' });
+        const token = jwt.sign(payload, 'clave-secreta', { expiresIn: '1h' });
 
         return res.status(200).json({
             message: 'El acceso fue correcto',
@@ -49,5 +40,5 @@ const login = async(req, res) => {
 };
 
 module.exports = {
-    login
+    loginByEmail,
 };
