@@ -1,10 +1,10 @@
 require("dotenv").config();
-require("./src/configs/db.confings");
+require("./src/configs/db.configs");
 
 const express = require('express');
 const app = express();
 const contactosRouter = require('./src/routes/contacto.route');
-const authRouter = require('./src/routes/auth.router');
+const authRouter = require('./src/routes/auth.route');
 
 
 app.use(express.json());
